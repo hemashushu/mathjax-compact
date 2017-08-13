@@ -1,0 +1,23 @@
+{
+  "name": "mathjax-compact",
+  "version": "2.7.1",
+  "description": "The compact version of MathJax.",
+  "homepage": "https://github.com/ivarptr/mathjax-compact",
+  "keywords": [
+    "math",
+    "mathml",
+    "tex",
+    "latex",
+    "asciimath",
+    "mathjax"
+  ],
+  "main": "./MathJax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "mathjax": "2.7.1"
+  }
+}

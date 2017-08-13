@@ -1,0 +1,53 @@
+#!/bin/bash
+SOURCE=./node_modules/mathjax
+UNPACKED=$SOURCE/unpacked
+
+rm -Rf fonts
+rm -Rf config
+rm -Rf extensions
+rm -Rf jax
+rm LICENSE
+
+# copy LICENSE
+cp $SOURCE/LICENSE .
+
+# copy fonts
+mkdir -p fonts/HTML-CSS
+cp -R $SOURCE/fonts/HTML-CSS/Tex fonts/HTML-CSS
+
+# copy config
+mkdir config
+cp $UNPACKED/config/default.js config
+cp $UNPACKED/config/Tex-AMS_CHTML-full.js config
+cp $UNPACKED/config/Tex-AMS_CHTML.js config
+cp $UNPACKED/config/Tex-AMS_SVG-full.js config
+cp $UNPACKED/config/Tex-AMS_SVG.js config
+
+# copy extensions
+mkdir extensions
+cp $UNPACKED/extensions/*.js extensions
+cp -R $UNPACKED/extensions/Tex extensions
+
+# copy jax
+mkdir jax
+cp -R $UNPACKED/jax/element jax
+
+# copy jax/input
+mkdir jax/input
+cp -R $UNPACKED/jax/input/Tex jax/input
+
+# copy jax/output
+mkdir jax/output
+cp -R $UNPACKED/jax/output/CommonHTML jax/output
+
+# copy jax/output/SVG
+mkdir jax/output/SVG
+cp $UNPACKED/jax/output/SVG/*.js jax/output/SVG
+cp -R $UNPACKED/jax/output/SVG/autoload jax/output/SVG
+
+# copy jax/output/SVG/fonts
+mkdir jax/output/SVG/fonts
+cp -R $UNPACKED/jax/output/SVG/fonts/STIX-Web jax/output/SVG/fonts
+
+# copy the main script
+cp $UNPACKED/MathJax.js .
