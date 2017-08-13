@@ -7,6 +7,7 @@ rm -Rf config
 rm -Rf extensions
 rm -Rf jax
 rm LICENSE
+rm MathJax.js
 
 # copy LICENSE
 cp $SOURCE/LICENSE .
@@ -51,3 +52,6 @@ cp -R $UNPACKED/jax/output/SVG/fonts/STIX-Web jax/output/SVG/fonts
 
 # copy the main script
 cp $UNPACKED/MathJax.js .
+
+# change ths BASE.isPacked value
+sed -i '' 's|^// MathJax\.isPacked = true|MathJax\.isPacked = true|' MathJax.js

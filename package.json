@@ -1,8 +1,12 @@
 {
   "name": "mathjax-compact",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "The compact version of MathJax.",
   "homepage": "https://github.com/ivarptr/mathjax-compact",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivarptr/mathjax-compact"
+  },
   "keywords": [
     "math",
     "mathml",
