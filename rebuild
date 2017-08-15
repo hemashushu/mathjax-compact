@@ -14,20 +14,20 @@ cp $SOURCE/LICENSE .
 
 # copy fonts
 mkdir -p fonts/HTML-CSS
-cp -R $SOURCE/fonts/HTML-CSS/Tex fonts/HTML-CSS
+cp -R $SOURCE/fonts/HTML-CSS/TeX fonts/HTML-CSS
 
 # copy config
 mkdir config
 cp $UNPACKED/config/default.js config
-cp $UNPACKED/config/Tex-AMS_CHTML-full.js config
-cp $UNPACKED/config/Tex-AMS_CHTML.js config
-cp $UNPACKED/config/Tex-AMS_SVG-full.js config
-cp $UNPACKED/config/Tex-AMS_SVG.js config
+cp $UNPACKED/config/TeX-AMS_CHTML-full.js config
+cp $UNPACKED/config/TeX-AMS_CHTML.js config
+cp $UNPACKED/config/TeX-AMS_SVG-full.js config
+cp $UNPACKED/config/TeX-AMS_SVG.js config
 
 # copy extensions
 mkdir extensions
 cp $UNPACKED/extensions/*.js extensions
-cp -R $UNPACKED/extensions/Tex extensions
+cp -R $UNPACKED/extensions/TeX extensions
 
 # copy jax
 mkdir jax
@@ -35,7 +35,7 @@ cp -R $UNPACKED/jax/element jax
 
 # copy jax/input
 mkdir jax/input
-cp -R $UNPACKED/jax/input/Tex jax/input
+cp -R $UNPACKED/jax/input/TeX jax/input
 
 # copy jax/output
 mkdir jax/output
